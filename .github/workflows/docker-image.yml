@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag argocdaspnet:$(date +%s)
+      run: docker build . --file Dockerfile --tag s6suraj/test:1.1
     
     - name: Push the Docker image
-      run: docker push argocdaspnet:$(date +%s)
+      run: docker push s6suraj/test:1.1
